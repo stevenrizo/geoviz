@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 Demo: 5 divs</title>
+		<script type="text/javascript" src="./d3/d3.v3.js"></script>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+                d3.csv("./data/Rattlesnake_maar_gravity_line1.csv", function(data) {
+                data.forEach(function(d) {
+                     d.distance = +d.distance;
+                     d.elevation = +d.elevation;
+                     d.observed_gravity = +d.observed_gravity;
+                      });
+
+   //Add data to dataenter
+   var dataEnter = d3.select("body").selectAll("p").data(data).enter();
+   dataEnter.append("span").html(function(d)
+   {
+    return d.distance + "," + d.elevation + "," + d.observed_gravity + "</br>";
+   });
+  });
+                </script>
+        <p> Now you are listing the columns you want:</p>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 Demo: 5 divs</title>
+		<script type="text/javascript" src="./d3/d3.v3.js"></script>
+		<style type="text/css">
+		
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+	        //set the width and height
+                var wt = 500;
+                var ht = 400;
+		var barPadding = 4;	
+                var barHeightScale = 40;
+                var dataset = [ 3,1,0,2,1,1,3,0,1,3];
+
+                //create svg element
+                var svg = d3.select("body")
+                          .append("svg")
+                          .attr("width", wt)
+                          .attr("height", ht);
+
+                svg.selectAll("rect")
+                        .data(dataset)
+                        .enter()
+                        .append("rect")
+                        .attr("x", function(d, i) {
+                            return i * (wt/10);
+                            })
+                        .attr("y", barHeightScale) 
+                        .attr("width", wt/10 - barPadding)
+                        .attr("height", barHeightScale)
+                        .attr("fill", "black");
+		</script>
+
+	</body>
+</html>

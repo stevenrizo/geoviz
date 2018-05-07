@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 scatterplot</title>
+		<script type="text/javascript" src="./d3/d3.v3.js"></script>
+		<style type="text/css">
+		
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+	        //set the width and height
+                var wt = 500;
+                var ht = 200;
+   
+                var dataset = [
+                  [ 5,     95 ],
+                  [ 50,   90 ],
+                  [ 100,   50 ],
+                  [ 150,   33 ],
+                  [ 200,   22 ],
+                  [ 250,   12 ],
+                  [ 300,   44 ],
+                  [ 350,    67 ],
+                  [ 400,    77 ],
+                  [ 450,   88 ]
+              ];
+
+                //create svg element
+                var svg = d3.select("body")
+                          .append("svg")
+                          .attr("width", wt)
+                          .attr("height", ht);
+
+                svg.selectAll("circle")
+                        .data(dataset)
+                        .enter()
+                        .append("circle")
+                        .attr("cx", function(d) {
+                           return d[0];
+                         })
+                        .attr("cy", function(d) {
+                           return d[1];
+                          })
+                        .attr("r", 5);
+		</script>
+<p> Note that the data points plot with low values at the top of the graph window, and high values at the bottom of the graph window. That is because the "y" axis in an svg container increases in pixel value from top to botton! </p>
+	</body>
+</html>

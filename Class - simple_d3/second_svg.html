@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>D3 Slider</title>
+  <script src="./d3/d3.v3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div>
+   <p> text here</p>
+  </div>
+  <script>
+    //make the svg container 
+    var svgContainer = d3.select("body").append("svg")
+      .attr("width", 200)
+      .attr("height", 200);
+     //make the rectangle 
+    var rectangle = svgContainer.append("rect")
+      .attr("x", 150)
+      .attr("y", 50)
+      .attr("width", 50)
+      .attr("height", 140)
+      .attr("fill", "red");
+  </script>
+
+  <p> text here </p>
+
+<script>
+    //make the svg container 
+    var svgContainer = d3.select("body").append("svg")
+      .attr("width", 200)
+      .attr("height", 200);
+     //make the rectangle 
+    var rectangle = svgContainer.append("rect")
+      .attr("x", 100)
+      .attr("y", 25)
+      .attr("width", 50)
+      .attr("height", 140)
+      .attr("fill", "red");
+  </script>
+
+</body>
+
+</html>

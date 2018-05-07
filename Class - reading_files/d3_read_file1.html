@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 Demo: 5 divs</title>
+		<script type="text/javascript" src="./d3/d3.v3.js"></script>
+	
+	</head>
+	<body>
+		<script type="text/javascript">
+              
+                d3.csv("./data/Rattlesnake_maar_gravity_line1.csv", function(data) {
+                   console.log(data[0]);
+                });
+                </script>
+        <p> Open developer tools and look at the web console to see "output". The object successfully reads the header (a header is expected!) and the first line of data.  Note that this method inputs the data as strings rather than as numbers, probably not what you want!</p>
+	</body>
+</html>
