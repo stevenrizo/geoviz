@@ -1,0 +1,51 @@
+
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{fullpage}
+
+\title{Geocomputation in Geohazards - Homework 9}
+\author{Connor}
+\date{October 18, 2011}
+\begin{document}
+ \maketitle
+\section*{Due}
+This homework assignment is due in class on \textbf{Tuesday, October 25}. This homework assignment will be started in class.
+
+\paragraph{Please note:} a late assignment will not be accepted! Turn in a hard (paper) copy of your answers – do not email your answers. Answers can be typed or handwritten, just be legible! Multiple pages should be stapled together. Some additional explanation is helpful and often necessary for the person reading your assignment to understand exactly what you are doing and why, so include a problem description, put comments in your PERL scripts, explain your parameters, explain your results and/or output. Assume that the person grading your assignment does not have a copy of the assignment. What is important here is that \textit{(1)} you understand what you are doing, and\textit{ (2)} that you can communicate what you are doing to others.
+
+\section*{Problem 1}
+Many methods of spatial density estimation were first applied to hazard problems related to Yucca Mountain, NV. Until recently, YM was the only US site under consideration for a high-level radioactive waste repository, which would need to isolate the radioactive waste from the biosphere for at least 10\,000 yr, and perhaps for 1\,000\,000 yr. The site is now abandoned. Unfortunately, the site is located in a basaltic volcanic field. Your job is to estimate the spatial density of volcanoes in this volcanic field. Be sure to consult the handout {\it Spatial Density} for tips on writing the PERL script.
+
+\begin{description}
+\item[Create] a flowchart of your algorithm to calculate the spatial density of volcanoes in the Yucca Mountain region (NV). 
+
+\item [Write] a PERL script to implement your algorithm in code.
+
+\item [Execute] your PERL script using the data file {\it yucca\_mountain\_volcanoes.dat} provided. This datafile can be downloaded from Blackboard and contains coordinates (Easting, Northing) and volcano name.
+
+\item[Plot] your spatial density results on a contour plot using GMT commands. Be sure to plot the location of the proposed YM repository on your contour map. Its location is approximately: 546500 E and 4087900 N
+
+\item[Turn in] your discussion, as indicated above, the flowchart, PERL script(s) and plots. Be sure the PERL scripts are annotated to indicate the function of each element of the PERL script(s), including GMT commands and the command parameters. Be sure to include a discussion of the smoothing parameter and explain why you chose the value you did. Note: you do not need to explain a parameter more than once.
+\end{description}
+
+\section*{Problem 2 - this problem is extra credit for undergraduates}
+The handout {\it Spatial Density} contains a lot of information about model uncertainty including event definition, choice of kernel bandwidth and the like. In this problem, explore the affects of these uncertainties on your model. Questions you will address include: how does event definition influence spatial density of volcanoes at YM? How does the choice of bandwidth influence spatial density at Yucca Mountain? 
+
+To explore the sensitivity of your spatial density model to event definition and bandwidth, calculate the spatial density at the location of the site. Draw a graph of the change in spatial density with change in bandwidth at the site location. Next look into the influence of event definition. Specifically, in the file {\it yucca\_mountain\_volcanoes.dat}, data entered after Thirsty Mesa (starting with Nye Canyon) are all Miocene volcanoes. Create a new file without these Miocene volcanoes and recreate the spatial density vs. bandwidth curve with this modified data file. Plot the two curves together. Discuss the results in terms of hazard at YM. Of course, additional model sensitivities can be explored as well. Step by step:
+
+
+\begin{description}
+
+\item [Create] a flowchart to illustrate your algorithm for determining the change in spatial density at the site location with change in bandwidth
+
+\item[Write] a PERL script to implement your algorithm
+
+\item[Execute] this PERL script using the datafile {\it yucca\_mountain\_volcanoes.dat} and your modified data file that includes only volcanoes younger than Miocene in age.
+
+\item[Plot] your results showing the two curves on one graph (Note: {\it psxy} is a very easy way to make this plot.)
+
+\item[Turn in] your flowchart, PERL script, plots, and discussion.
+ \end{description}
+
+\end{document}

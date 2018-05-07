@@ -1,0 +1,7 @@
+-110.72 38.37 Hanksville
+-110.15 39 GreenRiver
+-109.6 38.6 Moab
+-113.6 37.08 StGeorge
+-109.686 38.789 TowerArch
+-110.66245 37.84962 StarrSpr
+-110.58816 37.93906 TrachyteMesa

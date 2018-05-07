@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{calc,fadings,decorations.pathreplacing}
+\usepackage{verbatim}
+
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5pt}%
+
+\begin{document}
+
+
+% Definition of circles
+\def\firstcircle{(1,0) circle (1.5)}
+\def\secondcircle{(2,0) circle (1.5)}
+\def\universe{(-1,-2) rectangle (4,2)}
+\colorlet{circle edge}{blue!50}
+\colorlet{circle area}{blue!20}
+
+\tikzset{filled/.style={fill=circle area, draw=circle edge, thick},
+    outline/.style={draw=circle edge, thick}}
+
+\setlength{\parskip}{5mm}
+% Set A and B
+\begin{tikzpicture}
+    \begin{scope}
+        \clip \firstcircle;
+        \fill[filled] \secondcircle;
+    \end{scope}
+    \draw[outline] \firstcircle;
+    \draw[outline] \secondcircle;
+    \draw \universe;
+
+    \node[anchor=south] at (0, 1.5) {$A_{sim}$};
+    \node[anchor=south] at (2.5, 1.5) {$A_{obs}$};
+    \node[anchor=south] at (1.5, 0) {TP};
+    \node[anchor=south] at (0, 0) {FP};
+    \node[anchor=south] at (3, 0) {FN};
+    \node[anchor=south] at (3.5,-2) {TN};
+\end{tikzpicture}
+
+\end{document}

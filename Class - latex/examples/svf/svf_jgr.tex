@@ -1,0 +1,251 @@
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AGUtmpl.tex: this template file is for articles formatted with LaTeX2e,
+% Modified March 2013
+%
+% This template includes commands and instructions
+% given in the order necessary to produce a final output that will
+% satisfy AGU requirements.
+%
+% PLEASE DO NOT USE YOUR OWN MACROS
+% DO NOT USE \newcommand, \renewcommand, or \def.
+%
+% FOR FIGURES, DO NOT USE \psfrag or \subfigure.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% All questions should be e-mailed to latex@agu.org.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Step 1: Set the \documentclass
+%
+% There are two options for article format: two column (default)
+% and draft.
+%
+% PLEASE USE THE DRAFT OPTION TO SUBMIT YOUR PAPERS.
+% The draft option produces double spaced output.
+%
+% Choose the journal abbreviation for the journal you are
+% submitting to:
+
+
+% jgrga JOURNAL OF GEOPHYSICAL RESEARCH
+% gbc   GLOBAL BIOCHEMICAL CYCLES
+% grl   GEOPHYSICAL RESEARCH LETTERS
+% pal   PALEOCEANOGRAPHY
+% ras   RADIO SCIENCE
+% rog   REVIEWS OF GEOPHYSICS
+% tec   TECTONICS
+% wrr   WATER RESOURCES RESEARCH
+% gc    GEOCHEMISTRY, GEOPHYSICS, GEOSYSTEMS
+% sw    SPACE WEATHER
+% ms    JAMES
+% ef    EARTH'S FUTURE
+%
+%
+%
+% (If you are submitting to a journal other than jgrga,
+% substitute the initials of the journal for "jgrga" below.)
+\documentclass[draft,jgrga]{agutex}
+
+\bibliographystyle{agufull08}
+% To create numbered lines:
+
+% If you don't already have lineno.sty, you can download it from
+% http://www.ctan.org/tex-archive/macros/latex/contrib/ednotes/
+% (or search the internet for lineno.sty ctan), available at TeX Archive Network (CTAN).
+% Take care that you always use the latest version.
+
+% To activate the commands, uncomment \usepackage{lineno}
+% and \linenumbers*[1]command, below:
+
+\usepackage{rotating}
+\usepackage{lineno}
+\usepackage{booktabs}
+\linenumbers*[1]
+
+%  To add line numbers to lines with equations:
+%  \begin{linenomath*}
+%  \begin{equation}
+%  \end{equation}
+%  \end{linenomath*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures and Tables
+%
+%
+% DO NOT USE \psfrag or \subfigure commands.
+%
+%  Figures and tables should be placed AT THE END OF THE ARTICLE,
+%  after the references.
+%
+%  Uncomment the following command to include .eps files
+%  (comment out this line for draft format):
+\usepackage{graphicx}
+\graphicspath{{./figures/}}
+%
+%  Uncomment the following command to allow illustrations to print
+%   when using Draft:
+\setkeys{Gin}{draft=false}
+%
+% Substitute one of the following for [dvips] above
+% if you are using a different driver program and want to
+% proof your illustrations on your machine:
+%
+% [xdvi], [dvipdf], [dvipsone], [dviwindo], [emtex], [dviwin],
+% [pctexps],  [pctexwin],  [pctexhp],  [pctex32], [truetex], [tcidvi],
+% [oztex], [textures]
+%
+% See how to enter figures and tables at the end of the article, after
+% references.
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  ENTER PREAMBLE
+%
+%% ------------------------------------------------------------------------ %%
+
+% Author names in capital letters:
+\authorrunninghead{DENG ET AL.}
+
+% Shorter version of title entered in capital letters:
+\titlerunninghead{origin of vent clusters}
+
+\authoraddr{Corresponding author: Fanghui Deng,
+School of Geosciences,
+University of South Florida,
+Tampa, FL, USA.
+(fanghuideng@mail.usf.edu)}
+
+\begin{document}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  TITLE
+%
+%% ------------------------------------------------------------------------ %%
+
+
+\title{A geophysical model for the origin of vent clusters in Colorado Plateau volcanic fields}
+%
+% e.g., \title{Terrestrial ring current:
+% Origin, formation, and decay $\alpha\beta\Gamma\Delta$}
+%
+
+%% ------------------------------------------------------------------------ %%
+%
+%  AUTHORS AND AFFILIATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+
+%Use \author{\altaffilmark{}} and \altaffiltext{}
+
+% \altaffilmark will produce footnote;
+% matching \altaffiltext will appear at bottom of page.
+
+\authors{F. Deng,\altaffilmark{1},C. B. Connor,\altaffilmark{1}, R. Malservisi\altaffilmark{1}, L. J. Connor\altaffilmark{1}, J. W. White\altaffilmark{2}, A. Germa\altaffilmark{1}}
+
+
+\altaffiltext{1}{University of South Florida, Tampa, Florida, USA}
+
+
+\altaffiltext{2}{U.S. Geological Survey, Austin, Texas, USA}
+
+%\altaffiltext{5}{Dipartimento di Idraulica, Trasporti ed
+%Infrastrutture Civili, Politecnico di Torino, Turin, Italy.}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  ABSTRACT
+%
+%% ------------------------------------------------------------------------ %%
+
+% >> Do NOT include any \begin...\end commands within
+% >> the body of the abstract.
+
+\begin{abstract} (Chuck)
+
+Distributed volcanic fields are characterized by tens to hundreds of individial vents scattered over braod areas, with each vent active for months to decades, but cumulative activity in entire volcanic fields persisting for up to millions of years. Volcano vent clusters have been identified in numerous distributed volcanic fields globally, but the origin of these vent clusters remains uncertain. We show with new gravity data and numerical modeling that vent clusters in the Quaternary Springerville volcanic field (SVF), Arizona (USA), correlate with gradients in the gravity field. Inverse modeling 299 new gravity stations in and around the SVF using singular value decomposition with Tikinov regularization indicates that gravity anomalies are explained by density discontinuties that transect nearly the entire crust. These discontinuities are interpreted to be caused by boundaries in the North American crust accreted during the Proterozoic. Vent density is low in regions of high density Proterozoic crust, and high in areas of relatively low density Proterozoic crust. Vent density is highest within the SVF adjacent to crustal boundaries and long vent alignments parallel boundaries. 2D and 3D numerical models of magma ascent are developed to simulate long term average magma migration leading to the development of vent clusters in the SVF, assuming viscous flow of a fluid in a porous media (Darcy’s Law) is statistically equivalent to full field scale magma migration averaged over geological time through the crust. The location and flux from the magma source region are boundary conditions of the model. Changes in the model conductivity, associated with changes in the bulk properties of the lithosphere, can simulate preferential magma migration paths and alter the estimated magma flux at the surface. Using this model, we find variation in vent density, and occurrence of vent clusters, are explained by changes in conductivity assocaited with the Proterozoic crust. The implication is that in some distributed volcanic fields large-scale crustal structures, such as inherited tectonic block boundaries, influence magma ascent and the clustering of volcanic vents. Probabilistic models of volcanic hazard for distributed volcanic fields can be improved by identifying crustal structures and assessing their impact on volcano distribution with the use of numerical models.
+
+\end{abstract}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  BEGIN ARTICLE
+%
+%% ------------------------------------------------------------------------ %%
+
+% The body of the article must start with a \begin{article} command
+%
+% \end{article} must follow the references section, before the figures
+%  and tables.
+
+\begin{article}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  TEXT
+%
+%% ------------------------------------------------------------------------ %%
+
+
+
+\section{Introduction} 
+Distributed volcanic fields are remarkable features, found in a variety of tectonic settings on Earth and nearby planets, with individual fields comprising tens to hundreds of volcanoes scattered across thousands of square kilometers \citep{Williams1950, Hasenaka1985, Addington2001, Richardson2013}. Often volcanoes within these fields are thought to be monogenetic, with each volcano, or alignment of nearby volcanoes, representing a single, relatively short-lived magmatic event, such as intrusion and eruption of a dike swarm \citep{Rittmann1962, Nakamura1977}. On Earth, these volcanic fields are predominantly basaltic in composition, although many are bimodal \citep{Bacon1982, Mazzarini2004}. Most volcanoes within these distributed fields are scoria cones, small shields, or lava domes \citep{Valentine2015, Kereszturi2016}. 
+
+Distribution of vents within volcanic fields is analyzed to delineate trends in volcanic activity, such as migration of the field with lithospheric plate motion \citep{Tanaka1986,  Condit1989}, to better understand the relationship of volcanoes to prominent tectonic boundaries or faults \citep{Conway1997,Heming1980,vandenHove2017} and to better assess the likely locations of future eruptions \citep{Connor2012, Cappello2012}. Statistical analyses of vent distribution have shown that volcanoes cluster within many distributed volcanic fields, rather than being randomly or regularly distributed \citep{LeCorvec2013}. For example, vent clusters are found in the subduction-zone boundary Michoac\`an-Guanajuato volcanic field, Mexico \citep{Connor1990}, the Springerville and San Franscisco volcanic fields on the margin of the Colorado plateau (USA) \citep{Condit1996, Conway1998}, the rift-hosted Eifel volcanic field, Germany \citep{Schmincke1983,Jaquet2006}, or further from active plate boundaries \citep{Wei2003, Cas2016, vandenHove2017}.
+
+The orgin of vent clusters within distributed volcanic fields remains uncertain. One model is that magma source regions are heterogenous, with some areas of the mantle more prone to partial melting than others leading to more frequent and voluminous activity in some parts of the field compared to others. Alternatively, the crust may act as a filter. Density discontinuities and rigidity contrasts in one part of the crust may tend to enhance sill formation and arrest dike ascent. Structures such as folds \citep{Wetmore2009} and faults \citep{vandenHove2017} may alter magma ascent pathways.
+
+In this paper we explore the role of ancient discontinuities in the crust beneath the Springerville volcanic field (SVF), Arizona (USA), in changing patterns of volcanic activity. We accomplish this by re-examining the distribution of volcanic vents in the SVF and by comparing vent distribution to gravity anomalies that we have mapped across and around the field that are likely caused by lateral dicontinuties in crustal density, interpreted to have arisen during the accretion fo the North American continent approximately 1.5\,Ga \citep{Gilbert2007}. 
+
+Since it is practical to model the statistical distribution of vents mapped in the field as a continuous density function using kernel density estimation \citep{Connor1995, Connor2009, Germa2013}, we compare the vent density distribution with a model of bulk magma transport. Bulk magma transport is approximated using the advection-diffusion equation, with ascent from a uniform magma source region, and with heterogentity within the crust that alters flow paths and gives rise to variations in magma flux at the surface. A 3D gravity inversion \citep{White2015} is used to delineate the most prominent lateral changes in crustal density. 
+
+We find that using discontinuities derived from the gravity model, the bulk magma transport model gives rise to the major features of vent distribution observed in the SVF. That is, vent clusters, vent alignments, and overall changes in Quaternary vent distribution in the field are explained by the occurrence of ancient crustal discontinuities.
+
+In the following we briefly review the volcanology of the SVF, develop a statistical model of vent distribution, discuss and model the gravity data, and develop a simple model to illustrate the expected magma budget at the surface, given the model of the crust derived  freom gravity data. We suggest that the data and models we present show that patterns of Quaternary volcanic activity in Colorado Plateau boundary fields is directly impacted by the structure of the crust developed during the Proterozoic.
+
+
+\section{SVF background} (Chuck, Aurelie)
+
+The SVF sits at the southern margin of the Colorado Plateau, where the plateau transitions to the Basin and Range in an area known at the Arizona Transition Zone. Proterozoic crust is exposed along the Mogollon Rim in this transition zone and indicates broad regional changes in Proeterozoic crust from primarily greenstones, an assemblage of metavolcanic rocks and pelagic sediments that represent island arcs acreted onto the proto-continent, and Proterozoic sedimentary rocks \citep{Gilbert2007}. Gravity and magnetic maps and structural mapping of the region show that these broad lithologic transitions in the Proterozoic crust are preserved today, primarily creating ENE--WSW gravity and magnetic anomalies which parallel shear zones (faults) mapped at the surface which have been intermittently activiated, for example in Laramide orogeny \citep{Shoemaker1978, Seeley2003}. These investigations have also identified WNW-ESE trending structures in the basement, interpreted to be associated with Proteozoic extension \citep{Seeley2003}. Regional gravity anomalies show that both WNW--ENE and ENE--WSW gravity gravity gradients occur in the area of the SVF, suggesting that these Proterozoic boundaruies extend through the field.
+
+The Proterozoic boundaries are largely masked at the surface in the SVF area by Paleozoic sedimentary rocks. \citet{Crumpler1994}, however, mapped monoclinal flexures and faults in SVF that have predominantly WNW--ENE orientations, suggesting that Proterozoic boundaries localized later deformation in the SVF. Quaternary volcanic activity in the SVF is only the latest manifestation of volcanism. Miocene and Pliocene basalt lavas appear to be much more volumnious in the region than subsequent Quaternary volcanism. Lavas from the Mount Baldy shield volcano, located SW of the SVF have radiometric age determinations of $8.7 \pm 0.2$\,Ma and $9.0 \pm 0.2$\,Ma \citep{Condit1984, Condit1985, Nealey1989}. Much of the Quaternary SVF erupted onto an older lava flow surface, consisting of hawaiites ranging in age from $7.6 \pm 0.4$\,Ma to $2.9 \pm 0.1$\,Ma \citep{Laughlin1979, Condit1996}, and voluminous tholeiites dated at $5.3 \pm 0.1$\,Ma \citep{Cooper1990}. Numerous radiometric age determinations, stratigraphic and paleomagnetic studies suggest that latest volcanic activity in the SVF occurred approximately 2.1 -- 0.3 Ma \citep{Cooper1990, Pierce1979, Condit1985, Aubele1986}, with tholeiites erupting early in this episode, and more alkaline basalts erupting later (alkaline-olivine basalt, hawaiiite, mugearite and benmoreite) \citep{Condit1996}. Thus, the SVF region has expereince episodic volcanism at least from approximately 9\,Ma, with large chemcical heterogenity in the basaltic magmas erupted.
+
+A total of 409 Quaternary vents and assicated lava flows have been mapped in the SVF \citep{Condit1984, Condit1989}, which have been grouped into at least 366 erupive events, as some eruptions resulted in construction of multiple vents and vent alignment \citep{Condit1996}. These vents form clusters; erupptive activity waxed and waned within clusters at a much higher rate than in the field on average. 
+
+The overal pattern of vent distribution is characterized by a broad ENE--WSW band of volcanoes, parallel to mapped fexured and inferred Proterozoic lithologic boundaries. Vent alignmetns in the field tend to be oriented parallel to these boundaries as well -- ENE trending in the E part of the field, and WNW trending in the W part of the field \citep{Connor1992}.
+
+Analysis of clinopyroxene-whole-rock pairs in SVF basalts to derive pressure and temperature of crystallization indicates that magmas originate at a wide range of depths, up to at least 60\,km \citep{Putirka2003}. Significantly, some relatively high K$_2$O and K/Ti basalts appear to stagnate at depths of 0--12 and 23--30\,km, within the Proterozoic section. Significantly, no evidence of stagnation exists at the Moho \citep{Putirka2003}, suggesting that rheologic boundaries within the crust impact magma ascent in the SVF. These features of the geoschemistry of the SVF and relationship to spatio-temporal trends in volcanism led us to consider the role of lateral changes in in the Proterozoic crust in magma ascent.
+
+\section{Collection and modeling of gravity data} (Fanghui, Laura, JW)
+
+survey design and processing (Table of gravity data - processed)
+overlay with volcanic vents on contour map of gravity data
+development of PEST++ model
+overlay of volcanic vents on PEST++ gravity model
+
+\section{Finite Difference model} (Fanghui, Rocco)
+development of the 2D model
+development of the 3D model
+
+overlay of expected flux through surface and spatial density map.
+
+\section{Discussion} (Fanghui, Chuck, Rocco, Aurelie)
+Comparison with SFVF, Zuni-Bandera, others?
+\section{Conclusions} (Fanghui)
+
+\bibliography{references}
+
+
+\begin{acknowledgments}
+
+\end{acknowledgments}
+
+
+\end{article}
+\section{Figures}
+Laura and Fanghui work on improving the figures. No more than 10 figures, 2 in color.
+
+\end{document}
+

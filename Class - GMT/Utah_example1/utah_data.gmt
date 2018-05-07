@@ -1,0 +1,5 @@
+$outfile="utah__moab_bouguer_data.ps";
+
+system "gmt pscoast -R-110.25/-108.75/38/39.1 -Jm1:1000000 -Df -N2 -Ir -Ba1 -K > $outfile";
+system "gmt psxy utah_bouguer.xyz -R -Jm -Sp -G0 -O -K >> $outfile";
+system "gmt psxy south_utah_towns.ll -R -Jm -SC0.05i -W1p -G255/0/0 -O  >> $outfile";
