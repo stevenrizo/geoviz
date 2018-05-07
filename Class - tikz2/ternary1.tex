@@ -1,0 +1,25 @@
+\documentclass[border=10pt]{article}
+%%%<
+\usepackage{verbatim}
+%%%>
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm,compat=1.8}
+\usepgfplotslibrary{ternary}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{ternaryaxis}[
+	title=,
+	xlabel= wt \% coal,
+	ylabel=wt \% petroleum,
+	zlabel= wt \% natural gas,
+	label style=sloped,
+	clip=false,
+]
+\node[inner sep=3pt,circle,draw,fill=black] at (axis cs:.35,.4,.25) {};
+
+
+	
+\end{ternaryaxis}
+\end{tikzpicture}
+\end{document}

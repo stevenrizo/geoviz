@@ -1,0 +1,41 @@
+%triangulation problem
+\documentclass[landscape]{article}
+\usepackage{tikz}
+
+
+%%%<
+\usepackage{verbatim}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5pt}%
+%%%>
+
+\usetikzlibrary{intersections}
+\usepackage[top=1in,bottom=1in,right=1in,left=1in]{geometry}
+\begin{document}
+    \begin{tikzpicture}[scale=2,cap=round,>=latex]
+\coordinate (A) at (0cm,0cm);
+\coordinate (B) at (2cm,0cm);
+
+\draw [->, thick](0cm,2.5cm) -- (0cm,3cm) node[above,fill=white] {$N$};
+
+\filldraw[black] (A) circle(2pt) node [below left] {$A$};
+\filldraw[black] (B) circle(2pt) node [below right=-1pt] {$B$};
+\draw[-] (A) -- node [below] {$c = 100\,\textrm{m}$} (B);
+
+
+\draw[dashed, name path=line1] (A) -- (75:3cm) node [midway, left] {$b$};
+\draw[dashed, name path=line2] (B) -- ++(117:3.2cm) node [midway, right] {$a$};
+
+\draw[->] ([shift=(90:0.25cm)]B) arc (90:-243:0.25cm);
+\draw[dashed] (B) -- ++(90:0.4 cm);
+
+\draw[-] ([shift=(90:0.25cm)]A) arc (90:75:0.25cm);
+\draw[dashed] (A) -- ++(90:0.4 cm);
+
+\path [name intersections={of= line1 and line2,by=C}];
+\filldraw [fill=red] (C) circle(2pt) node [right=5pt] {$C$};
+\
+
+    \end{tikzpicture}
+\end{document}

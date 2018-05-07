@@ -1,0 +1,190 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{calc,fadings,decorations.pathreplacing}
+\usepackage{verbatim}
+\usetikzlibrary{patterns}
+\usepackage[active,tightpage]{preview}
+\usetikzlibrary{svg.path}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5pt}%
+
+\begin{document}
+
+% Definition of rectangle
+\def\myrect{(-1,-0.5)rectangle (11,9)}
+
+\definecolor{lightgoldenrod}{RGB}{238,220,130}
+
+\pgfdeclarepatternformonly{limestone}{\pgfqpoint{-1pt}{-1pt}}{\pgfqpoint{5mm}{5mm}}{\pgfqpoint{4mm}{4mm}}%
+{
+  \pgfsetlinewidth{0.8pt}
+  \pgfpathmoveto{\pgfqpoint{0mm}{1mm}}
+  \pgfpathlineto{\pgfqpoint{4mm}{1mm}}
+  \pgfpathmoveto{\pgfqpoint{0mm}{3mm}}
+  \pgfpathlineto{\pgfqpoint{4mm}{3mm}}
+  \pgfpathmoveto{\pgfqpoint{1mm}{0mm}}
+  \pgfpathlineto{\pgfqpoint{1mm}{1mm}}
+  \pgfpathmoveto{\pgfqpoint{3mm}{1mm}}
+  \pgfpathlineto{\pgfqpoint{3mm}{3mm}}
+  \pgfpathmoveto{\pgfqpoint{1mm}{3mm}}
+  \pgfpathlineto{\pgfqpoint{1mm}{4mm}}
+  \pgfusepath{stroke}
+}
+%\pgfdeclarepatternformonly[ variables ]{ name }{ bottom left }{ top right }{ tile size }{ code }
+\pgfdeclarepatternformonly{massivesandstone}{\pgfpoint{-2mm}{-2mm}}{\pgfpoint{2mm}{2mm}}{\pgfpoint{4mm}{4mm}}%
+{
+  \pgfpathcircle{\pgfpoint{-1.1mm}{1.5mm}}{.25mm}
+  \pgfpathcircle{\pgfpoint{-0.5mm}{-.25mm}}{.25mm}
+  \pgfpathcircle{\pgfpoint{1.25mm}{.75mm}}{.25mm}
+   \pgfpathcircle{\pgfpoint{1.5mm}{-1.65mm}}{.25mm}
+   \pgfusepath{fill}
+}
+
+\pgfdeclarepatternformonly{sandstone}{\pgfpoint{-2mm}{-2mm}}{\pgfpoint{2mm}{2mm}}{\pgfpoint{4mm}{4mm}}%
+{
+  \pgfpathcircle{\pgfpoint{-1.1mm}{-1.2mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{-1.14mm}{-0.1mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{-1mm}{0.9mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{0.15mm}{-1.4mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{-0.25mm}{-0.1mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{0mm}{1.3mm}}{.2mm}
+\pgfpathcircle{\pgfpoint{1.15mm}{-1.4mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{1.25mm}{-0.1mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{0.9mm}{1.3mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{1.75mm}{0.3mm}}{.2mm}
+   \pgfusepath{fill}
+}
+
+\pgfdeclarepatternformonly{ripplesandstone}{\pgfpoint{-2mm}{-2mm}}{\pgfpoint{2mm}{2mm}}{\pgfpoint{4mm}{4mm}}%
+{
+  \pgfpathcircle{\pgfpoint{-1.9mm}{-1mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{-1.4mm}{-0.8mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{-0.7mm}{-.3mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{-0.2mm}{0mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{0.2mm}{0mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{0.7mm}{-.3mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{1.4mm}{-0.8mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{1.3mm}{1mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{-0.34mm}{1.5mm}}{.2mm}
+  \pgfusepath{fill}
+}
+
+\pgfdeclarepatternformonly{shale}{\pgfpoint{-2mm}{-2mm}}{\pgfpoint{2mm}{2mm}}{\pgfpoint{4mm}{4mm}}%
+{
+  \pgfpathmoveto{\pgfpoint{-2mm}{0mm}}
+  \pgfpathlineto{\pgfqpoint{0mm}{0mm}}
+  \pgfpathmoveto{\pgfpoint{-1mm}{1.5mm}}
+  \pgfpathlineto{\pgfqpoint{1mm}{1.5mm}}
+  \pgfpathmoveto{\pgfpoint{-.75mm}{-1.1mm}}
+  \pgfpathlineto{\pgfqpoint{1.25mm}{-1.1mm}}
+  \pgfusepath{stroke}
+}
+
+\pgfdeclarepatternformonly{sandyshale}{\pgfpoint{-2mm}{-2mm}}{\pgfpoint{2mm}{2mm}}{\pgfpoint{4mm}{4mm}}%
+{
+  \pgfpathmoveto{\pgfpoint{-2mm}{0mm}}
+  \pgfpathlineto{\pgfqpoint{0mm}{0mm}}
+  \pgfpathmoveto{\pgfpoint{-1mm}{1.5mm}}
+  \pgfpathlineto{\pgfqpoint{1mm}{1.5mm}}
+  \pgfpathmoveto{\pgfpoint{-.75mm}{-1.1mm}}
+  \pgfpathlineto{\pgfqpoint{1.25mm}{-1.1mm}}
+\pgfpathcircle{\pgfpoint{1.3mm}{0.65mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{-0.34mm}{-1.6mm}}{.2mm}
+  \pgfusepath{stroke}
+}
+
+
+\pgfdeclarepatternformonly{beddedpumice}{\pgfpoint{-2mm}{-2mm}}{\pgfpoint{2mm}{2mm}}{\pgfpoint{4mm}{4mm}}%
+{
+  \pgfpathcircle{\pgfpoint{-1.75mm}{0mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{-1.4mm}{-0.2mm}}{.2mm}
+   \pgfpathcircle{\pgfpoint{-0.9mm}{0.2mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{-0.5mm}{0mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{0mm}{0mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{0.6mm}{-0.2mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{1.2mm}{-0.2mm}}{.2mm} 
+  \pgfpathcircle{\pgfpoint{1.7mm}{0.2mm}}{.2mm}
+  \pgfusepath{stroke}
+ \pgfpathcircle{\pgfpoint{1.5mm}{-1mm}}{.2mm}
+   \pgfpathcircle{\pgfpoint{-1.0mm}{1.3mm}}{.2mm}
+   \pgfusepath{fill}
+}
+
+\pgfdeclarepatternformonly{lahar}{\pgfpoint{-2mm}{-2mm}}{\pgfpoint{2mm}{2mm}}{\pgfpoint{4mm}{4mm}}%
+{
+  \pgfpathcircle{\pgfpoint{-1.3mm}{0mm}}{.6mm}
+   \pgfpathcircle{\pgfpoint{-0.5mm}{1mm}}{.2mm}
+  \pgfpathcircle{\pgfpoint{0mm}{-0.5mm}}{.4mm}
+  \pgfusepath{stroke}
+ \pgfpathcircle{\pgfpoint{1.8mm}{-1mm}}{.2mm}
+   \pgfpathcircle{\pgfpoint{-1.0mm}{1.8mm}}{.2mm}
+   \pgfpathcircle{\pgfpoint{0.75mm}{1mm}}{.3mm}
+   \pgfusepath{fill}
+\pgfpathmoveto{\pgfpoint{1.4mm}{-1.75mm}}
+\pgfpathlineto{\pgfpoint{1.75mm}{-0.6mm}}
+\pgfpathmoveto{\pgfpoint{-1.mm}{-1.9mm}}
+\pgfpathlineto{\pgfpoint{-1.8mm}{-1.6mm}}
+\pgfusepath{stroke}
+}
+
+\pgfdeclarepatternformonly{pdc}{\pgfpoint{-2mm}{-2mm}}{\pgfpoint{2mm}{2mm}}{\pgfpoint{4mm}{4mm}}%
+{
+   \pgfpathcircle{\pgfpoint{-1.1mm}{1.5mm}}{.25mm}
+   \pgfpathcircle{\pgfpoint{-0.5mm}{-.25mm}}{.2mm}
+   \pgfpathcircle{\pgfpoint{1.25mm}{.75mm}}{.15mm}
+   \pgfpathcircle{\pgfpoint{1.5mm}{-1.mm}}{.25mm}
+   \pgfpathcircle{\pgfpoint{1.79mm}{0mm}}{.2mm}
+   \pgfusepath{fill}
+   \pgfsetcornersarced{\pgfpoint{1pt}{1pt}}
+   \pgfpathmoveto{\pgfpointpolar{0}{0.5mm}}
+   \pgfpathlineto{\pgfpointpolar{72}{1mm}}
+   \pgfpathlineto{\pgfpointpolar{144}{0.4mm}}
+   \pgfpathlineto{\pgfpointpolar{0}{0.5mm}}
+   \pgfusepath{stroke}
+   \pgfpathmoveto{\pgfpoint{1mm}{-0.5mm}}
+   \pgfpathlineto{\pgfpoint{0.6mm}{0mm}}
+   \pgfpathlineto{\pgfpoint{.4mm}{-1.4mm}}
+   \pgfpathlineto{\pgfpoint{1mm}{-0.5mm}}
+   \pgfusepath{stroke}
+   \pgfpathmoveto{\pgfpoint{1.75mm}{1.5mm}}
+   \pgfpathlineto{\pgfpoint{1.6mm}{1.1mm}}
+   \pgfpathlineto{\pgfpoint{1.4mm}{1.8mm}}
+   \pgfpathlineto{\pgfpoint{1.75mm}{1.5mm}}
+   \pgfusepath{stroke}
+}
+
+\pgfdeclarepatternformonly[/tikz/radius,\thickness,\size]{rings}
+{\pgfpoint{-0.5*\size}{-0.5*\size}}
+{\pgfpoint{0.5*\size}{0.5*\size}}
+{\pgfpoint{\size}{\size}}
+{
+\pgfsetlinewidth{\thickness}
+\pgfpathcircle\pgfpointorigin{\pgfkeysvalueof{/tikz/radius}}
+\pgfusepath{stroke}
+}
+\newdimen\thickness
+\tikzset{radius/.initial=4pt,size/.store in=\size, size=20pt,thickness/.code={\thickness=#1},thickness=0.75pt}
+
+\begin{tikzpicture} [place/.style={circle, draw=blue!50, fill=blue!20, thick, inner sep=0pt, minimum size = 6 mm}]
+\filldraw [pattern=sandyshale] (0,0) -- (0,2) --(2,2) -- (2,0)-- cycle;
+
+
+\filldraw [pattern=sandstone] (0,2)--(0,3)[rounded corners=4pt] -- (1.25,3)-- (1.6,2.5)[sharp corners] --(2,2.5) -- (2,2)-- cycle;
+
+
+\filldraw [pattern=pdc] (0,3) -- (0,3.5) --(2,3.5) -- (2,2.5)[rounded corners=4pt]-- (1.6,2.5)--(1.25,3)[sharp corners]-- cycle;
+
+\node (sandyshale) at (2.5,1) [place] {$v_1$};
+\node (sandstone) at (2.5,2.25) [place] {$v_2$};
+\node (pdc) at (2.5,3.25) [place] {$v_3$};
+
+\draw [->] (sandyshale) -- node[right] {conformity} (sandstone);
+\draw [->] (sandstone) -- node[right] {unconformity} (pdc);
+\end{tikzpicture}
+
+
+
+
+
+
+\end{document}
